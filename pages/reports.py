@@ -1,4 +1,5 @@
 # Load important libraries 
+from map_utils import *
 import streamlit as st 
 import pandas as pd
 import requests
@@ -40,9 +41,7 @@ def app():
 
     # Load the uploaded data 
     st.markdown("# Reports")
-    response = requests.get('http://iplaner.pl:8093/api/v1/key/f78a2e9a/agency/1211/command/scheduleVertStops', headers=headers, params=params, verify=False)
-    scheduled_stops = response.json()
-
+    scheduled_stops = getScheduledStops()
 
     st.table(refactor(scheduled_stops))
 

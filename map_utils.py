@@ -248,3 +248,7 @@ def getLivePositions(assignedStatus = False):
 
     Fullscreen().add_to(m)
     return m
+
+def getScheduledStops():
+    url = transitimeServer + "/command/scheduleVerStops"
+    return requests.get(url, headers=headers, params=params, verify=False).json()
