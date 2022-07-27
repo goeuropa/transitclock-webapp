@@ -1,0 +1,10 @@
+version: "3"
+services:
+  transitclock_streamlit:
+    image: transitimestreamlit 
+    container_name: transitclock_streamlit
+    restart: on-failure
+    ports:
+      - "8501:80"
+    volumes: 
+      - ./:/app 

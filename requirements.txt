@@ -1,0 +1,7 @@
+streamlit
+python-dotenv
+debugpy
+pycryptodome
+streamlit_keplergl
+streamlit_folium
+streamlit-autorefresh
